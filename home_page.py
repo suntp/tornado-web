@@ -18,7 +18,8 @@ class Application(tornado.web.Application):
             (r"/", MainHandler),
             (r"/recommended/", RecommendedHandler),
             (r"/edit/([0-9Xx\-]+)", BookEditHandler),
-            (r"/add", BookEditHandler)
+            (r"/add", BookEditHandler),
+            (r"/artical1", ArticalHandler),
         ]
 
         settings = dict(
@@ -107,6 +108,14 @@ class BookEditHandler(tornado.web.RequestHandler):
             book['date_added'] = int(time.time())
             coll.insert(book)
         self.redirect("/recommended/")
+
+class ArticalHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.render(
+            "articals/artical1.htm",
+            # page_title="suntp | Home",#当然我在扯淡
+            # header_text="Welcome to suntp!",
+        )
 
 
 if __name__ == "__main__":
