@@ -39,7 +39,7 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         self.render(
             "module.html",
-            page_title="suntp | Home",
+            page_title="suntp | Home",#当然我在扯淡
             header_text="Welcome to suntp!",
         )
 
