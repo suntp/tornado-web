@@ -51,4 +51,22 @@ db.books.insert({
 #      })
 # db.books.remove({
 #      "image":"/static/images/Penguins.jpg",
+<<<<<<< HEAD
 #      })
+=======
+#      })
+
+import tornado.httpclient
+import json
+import time
+
+def on_response(response):
+    print "on_response"
+    body = json.loads(response)
+    print body
+
+client = tornado.httpclient.AsyncHTTPClient()
+rst = client.fetch("htt;://www.sina.com", callback = on_response)
+print rst
+time.sleep(10)
+>>>>>>> 0fccc59d65457cbf7ad1c457f4939e4eeded1d6e

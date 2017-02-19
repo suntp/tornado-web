@@ -37,8 +37,13 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         self.render(
             "index.html",
+<<<<<<< HEAD
             page_title="suntp | Home",
             header_text="Welcome to suntp!",
+=======
+            page_title="Burt's Books | Home",
+            header_text="Welcome to Burt's Books!",
+>>>>>>> 0fccc59d65457cbf7ad1c457f4939e4eeded1d6e
         )
 
 
